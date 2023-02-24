@@ -7,6 +7,10 @@
 # cd wiringOP
 # ./build clean
 # ./build 
+# cd ..
+# rm -r wiringOP
+#
+# pip install OPi.GPIO
 ```
 
 ---
