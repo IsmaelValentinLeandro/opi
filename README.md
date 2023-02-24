@@ -10,7 +10,8 @@
 # cd ..
 # rm -r wiringOP
 #
-# pip install OPi.GPIO
+# cd orangepi_PC_gpio_pyH3
+# python setup.py install 
 ```
 
 ---
