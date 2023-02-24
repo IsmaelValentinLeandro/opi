@@ -1,15 +1,7 @@
-Projeto Oficial https://github.com/IsmaelValentinLeandro/wiringOP
-Baseado na versão 2.46
-
-## Instalação
-
-```
-# apt-get update
-# apt-get install -y git
-# git clone https://github.com/IsmaelValentinLeandro/wiringOP
-```
 
 ## Compilar o wiringOP
+
+# Extrair arquivo .zip 
 
 ```
 # cd wiringOP
