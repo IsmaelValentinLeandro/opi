@@ -10,8 +10,6 @@
 # cd ..
 # rm -r wiringOP
 #
-# cd orangepi_PC_gpio_pyH3
-# python setup.py install 
 ```
 
 ---
