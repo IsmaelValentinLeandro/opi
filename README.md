@@ -11,7 +11,8 @@
 # sudo ./build clean
 # sudo ./build 
 # cd ..
-# rm -r wiringOP
+# cd ..
+# rm -r opi
 #
 ```
 
