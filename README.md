@@ -399,90 +399,90 @@ Na linha de comando do Linux:
 
 ```
 # gpio -v
-```
-Isso imprime a versão.
 
+Isso imprime a versão.
+```
 
 ```
 # gpio -g …
-```
-O sinalizador -g opcional faz com que os números dos pinos sejam interpretados como números de pinos BCM_GPIO em vez de números de pinos padrão do wirePi.
 
+O sinalizador -g opcional faz com que os números dos pinos sejam interpretados como números de pinos BCM_GPIO em vez de números de pinos padrão do wirePi.
+```
 
 ```
 # gpio -1 …
-```
-O sinalizador opcional -1 faz com que os números dos pinos sejam interpretados como números de pinos de hardware - isso funciona apenas para o conector P1.
 
+O sinalizador opcional -1 faz com que os números dos pinos sejam interpretados como números de pinos de hardware - isso funciona apenas para o conector P1.
+```
 
 ```
 # gpio -p …
-```
-O sinalizador -p opcional faz com que o programa gpio assuma que há uma placa PiFace instalada no Rasberry Pi e os comandos subsequentes são interpretados como pinos no PiFace. Observação: os pinos no PiFace são de 200 a 207 para leitura e gravação, com os pinos 208 a 215 lendo o estado do registro de latch de saída (ou seja, você pode ler o estado dos pinos de saída)
 
+O sinalizador -p opcional faz com que o programa gpio assuma que há uma placa PiFace instalada no Rasberry Pi e os comandos subsequentes são interpretados como pinos no PiFace. Observação: os pinos no PiFace são de 200 a 207 para leitura e gravação, com os pinos 208 a 215 lendo o estado do registro de latch de saída (ou seja, você pode ler o estado dos pinos de saída)
+```
 
 ```
 #gpio -x …
-```
-O sinalizador -x opcional faz com que o programa gpio inicialize um módulo de expansão adicional. Os módulos de expansão são definidos com seu nome (por exemplo, mcp23s17) e um conjunto de parâmetros separados por dois pontos. O primeiro parâmetro é sempre o número do pino base para este módulo de expansão. Consulte a documentação de cada tipo de módulo para determinar os valores e funções de parâmetros adicionais.
 
+O sinalizador -x opcional faz com que o programa gpio inicialize um módulo de expansão adicional. Os módulos de expansão são definidos com seu nome (por exemplo, mcp23s17) e um conjunto de parâmetros separados por dois pontos. O primeiro parâmetro é sempre o número do pino base para este módulo de expansão. Consulte a documentação de cada tipo de módulo para determinar os valores e funções de parâmetros adicionais.
+```
 
 ## Comandos padrão de entrada e saída
 
 
 ```
 # gpio mode <pin> in/out/pwm/clock/up/down/tri
-```
-Isso define o modo de um pino para entrada, saída, pwm ou modo de relógio e, adicionalmente, pode definir os resistores pull-up/down internos para pull-up, pull-down ou nenhum.
 
+Isso define o modo de um pino para entrada, saída, pwm ou modo de relógio e, adicionalmente, pode definir os resistores pull-up/down internos para pull-up, pull-down ou nenhum.
+```
 
 ```
 # gpio write <pin> 0/1
-```
-Isso define um pino de saída para alto (1) ou baixo (0)
 
+Isso define um pino de saída para alto (1) ou baixo (0)
+```
 
 ```
 # gpio pwm <pin> <value>
-```
-Defina o pino para um valor PWM (0-1023 é suportado)
 
+Defina o pino para um valor PWM (0-1023 é suportado)
+```
 
 ```
 # gpio read <pin>
-```
-Lê e imprime o valor lógico do pino fornecido. Ele imprimirá 0 (baixo) ou 1 (alto).
 
+Lê e imprime o valor lógico do pino fornecido. Ele imprimirá 0 (baixo) ou 1 (alto).
+```
 
 ```
 # gpio awrite <pin> <value>
-```
-Isso executa uma leitura analógica do pino fornecido. O Pi não possui hardware analógico integrado, portanto, você precisa especificar um módulo externo usando o sinalizador -x.
 
+Isso executa uma leitura analógica do pino fornecido. O Pi não possui hardware analógico integrado, portanto, você precisa especificar um módulo externo usando o sinalizador -x.
+```
 
 ```
 # gpio aread <pin>
-```
-Isso lê o valor analógico no pino fornecido. O não possui hardware analógico on-board, então você precisa especificar um módulo externo usando o sinalizador -x.
 
+Isso lê o valor analógico no pino fornecido. O não possui hardware analógico on-board, então você precisa especificar um módulo externo usando o sinalizador -x.
+```
 
 ```
 # gpio readall
-```
-Isso lê todos os pinos normalmente acessíveis e imprime uma tabela de seus números (wiringPi, BCM_GPIO e números de pinos físicos), criando um gráfico de referência cruzada útil), juntamente com seus modos e valores atuais. Este comando detectará a versão/modelo do seu Pi e imprimirá o diagrama de pinos apropriado para o seu Pi.
 
+Isso lê todos os pinos normalmente acessíveis e imprime uma tabela de seus números (wiringPi, BCM_GPIO e números de pinos físicos), criando um gráfico de referência cruzada útil), juntamente com seus modos e valores atuais. Este comando detectará a versão/modelo do seu Pi e imprimirá o diagrama de pinos apropriado para o seu Pi.
+```
 
 ```
 # gpio allreadall
-```
-Isso lê todos os pinos do seu Raspberry Pi. É essencialmente o mesmo formato usado no Compute Module.
 
+Isso lê todos os pinos do seu Raspberry Pi. É essencialmente o mesmo formato usado no Compute Module.
+```
 
 ```
 # gpio wfi <pin> rising/falling/both
-```
-Isso faz com que o GPIO execute uma espera não ocupada em um único pino GPIO até que ele mude de estado para o indicado.
 
+Isso faz com que o GPIO execute uma espera não ocupada em um único pino GPIO até que ele mude de estado para o indicado.
+```
 
 # Comandos de carregamento do módulo do kernel
 Observe que esses comandos não funcionarão se você tiver habilitado a interface device-tree. Um aviso será impresso se assim for.
@@ -490,18 +490,18 @@ Observe que esses comandos não funcionarão se você tiver habilitado a interfa
 
 ```
 # gpio load spi [buffer size in KB]
-```
-Isso carrega os módulos do kernel SPI e, opcionalmente, define o buffer interno para o tamanho especificado em KB (múltiplos de 1024). O padrão é 4 KB e geralmente é mais do que suficiente para a maioria dos aplicativos que trocam apenas um byte ou 2 por vez no barramento SPI.
 
+Isso carrega os módulos do kernel SPI e, opcionalmente, define o buffer interno para o tamanho especificado em KB (múltiplos de 1024). O padrão é 4 KB e geralmente é mais do que suficiente para a maioria dos aplicativos que trocam apenas um byte ou 2 por vez no barramento SPI.
+```
 
 As entradas /dev/spi* são definidas para pertencer à pessoa que usa o programa gpio, portanto, não há necessidade de executar programas subsequentes como root (a menos que eles usem outras funções do wirePi)
 
 
 ```
 # gpio load i2c [baud rate in Kb/sec]
-```
-Isso carrega os módulos do kernel I2C e, opcionalmente, define a taxa de transmissão para a velocidade fornecida em Kb/s (múltiplos de 1000). O padrão é 100Kb/seg.
 
+Isso carrega os módulos do kernel I2C e, opcionalmente, define a taxa de transmissão para a velocidade fornecida em Kb/s (múltiplos de 1000). O padrão é 100Kb/seg.
+```
 
 As entradas /dev/I2c* são definidas para pertencer à pessoa que usa o programa gpio, portanto, não há necessidade de executar programas subsequentes como root (a menos que eles usem outras funções do wirePi)
 
@@ -511,40 +511,40 @@ As entradas /dev/I2c* são definidas para pertencer à pessoa que usa o programa
 
 ```
 # gpio i2cdetect
-```
-Isso executa o comando i2cdetect, mas passa os parâmetros corretos para o barramento I2C para a revisão de hardware do Pi. ou seja ele executa i2cdetect -y 0 em um Rev. 1 Pi e i2cdetect -y 1 em um Rev. 2 Pi. (Você pode encurtar i2cdetect para i2cd)
 
+Isso executa o comando i2cdetect, mas passa os parâmetros corretos para o barramento I2C para a revisão de hardware do Pi. ou seja ele executa i2cdetect -y 0 em um Rev. 1 Pi e i2cdetect -y 1 em um Rev. 2 Pi. (Você pode encurtar i2cdetect para i2cd)
+```
 
 ## comandos /sys/class/gpio mode
 ```
 # gpio export <pin> in/out
-```
-Isso exporta o pino fornecido (número do pino BCM-GPIO) como uma entrada ou saída e o torna disponível para um programa de usuário em execução como o mesmo usuário.
 
+Isso exporta o pino fornecido (número do pino BCM-GPIO) como uma entrada ou saída e o torna disponível para um programa de usuário em execução como o mesmo usuário.
+```
 
 ```
 # gpio unexport <pin>
-```
-Remove a exportação do pino fornecido.
 
+Remove a exportação do pino fornecido.
+```
 
 ```
 # gpio unexportall
-```
-Remove todas as exportações /sys/class/gpio.
 
+Remove todas as exportações /sys/class/gpio.
+```
 
 ```
 # gpio exports
-```
-Isso imprime uma lista de todos os pinos gpio que foram exportados por meio da interface /sys/class/gpio e seus modos.
 
+Isso imprime uma lista de todos os pinos gpio que foram exportados por meio da interface /sys/class/gpio e seus modos.
+```
 
 ```
 # gpio edge <pin> rising/falling/both/none
-```
-Isso permite que o pino fornecido para interrupção de borda seja acionado na borda ascendente, descendente ou em ambas as bordas. (Ou nenhum que o desabilita)
 
+Isso permite que o pino fornecido para interrupção de borda seja acionado na borda ascendente, descendente ou em ambas as bordas. (Ou nenhum que o desabilita)
+```
 
 Nota: Os números dos pinos no modo sys são sempre números dos pinos BCM-GPIO.
 
@@ -553,23 +553,23 @@ Nota: Os números dos pinos no modo sys são sempre números dos pinos BCM-GPIO.
 ```
 # gpio mode 0 out
 # gpio write 0 1
-```
-O acima usa os números dos pinos do wirePi para definir o pino 0 como uma saída e, em seguida, define o pino para uma lógica 1.
 
+O acima usa os números dos pinos do wirePi para definir o pino 0 como uma saída e, em seguida, define o pino para uma lógica 1.
+```
 
 ```
 # gpio -g mode 17 out
 # gpio -g write 17 1
-```
-Isso usa o esquema de numeração de pinos BCM_GPIO e executa a mesma operação acima.
 
+Isso usa o esquema de numeração de pinos BCM_GPIO e executa a mesma operação acima.
+```
 
 ```
 # gpio -1 mode 11 out
 # gpio -1 write 11 1
-```
-Isso usa o esquema de numeração de pino P1 físico e executa a mesma operação acima.
 
+Isso usa o esquema de numeração de pino P1 físico e executa a mesma operação acima.
+```
 
 ## Resistores pull up/down internos
 As linhas GPIO possuem resistores pull-up ou pull-down internos que podem ser controlados via software quando um pino está no modo de entrada. Não há como ler o status desses resistores.
