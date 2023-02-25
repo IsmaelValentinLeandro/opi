@@ -1,8 +1,6 @@
 
 ## Compilar o wiringOP
 
-# Extrair arquivo .zip 
-
 ```
 # git clone https://github.com/IsmaelValentinLeandro/opi.git
 # cd opi
