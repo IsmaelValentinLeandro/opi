@@ -4,9 +4,14 @@
 # Extrair arquivo .zip 
 
 ```
+# git clone https://github.com/IsmaelValentinLeandro/opi.git
+# cd opi
+# mkdir wiringOP
+# mv wiringOP.zip ./wiringOP
 # cd wiringOP
-# ./build clean
-# ./build 
+# unzip wiringOP.zip
+# sudo ./build clean
+# sudo ./build 
 # cd ..
 # rm -r wiringOP
 #
