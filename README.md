@@ -9,7 +9,7 @@ How to build wiringOP
 # ./build 
 ```
 
-## Compilar o wiringOP
+## Compilar o wiringOP alternativo
 
 ```
 # git clone https://github.com/IsmaelValentinLeandro/opi.git
