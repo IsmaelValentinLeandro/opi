@@ -1,3 +1,11 @@
+How to download wiringOP
+# apt-get update
+# apt-get install -y git
+# git clone https://github.com/orangepi-xunlong/wiringOP.git
+How to build wiringOP
+# cd wiringOP
+# ./build clean
+# ./build 
 
 ## Compilar o wiringOP
 
